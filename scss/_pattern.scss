@@ -1,7 +1,7 @@
 .container{
     width: 100%;
     height: 100%;
-    max-width: 131.2rem;
+    max-width: 133rem;
     padding: 0 1.5rem;
     margin: 0 auto;
 }
@@ -46,23 +46,28 @@ a{
     border: 0rem;
     border-radius: 0.4rem;
     display: flex;
-    img{
-        background-color: #00AEFF;
-    }
-    span{
-        background: #00AEFF;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.4s;
+        background-color: #40C2FF;
+        
     }
 }
 .card-games{
     width: 100%;
-    max-width: 301px;
+    max-width: 30.1rem;
+    padding-bottom: 3.7rem;
     .game-info{
         display: flex;
         flex-direction: column;
+        h3{
+            padding-top: 2.5rem;
+            padding-bottom: 0.43rem;
+        }
         p{
             font-weight: 400;
-            font-size: 15.05px;
-            line-height: 23px;
+            font-size: 1.505rem;
+            line-height: 2.3rem;
     
     
             color: #E5E5E5;
@@ -73,17 +78,52 @@ a{
     }
     
     .imagem{
-        display: grid;
+        
         overflow: hidden;
         max-width: fit-content;
-        width: 100%;
+        max-width: 30.1rem;
+        max-height: 41.28rem;
+        min-width: 30.1rem;
+        
         img{
             transition:0.3s ease-in;
             width: 100%;
             height: 100%;
+            
+           
            
         }
 
+    }
+    .last-card{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 30.1rem;
+        height: 41.28rem;
+        gap: 3.6rem;
+        border: 1.6125px solid #212428;
+        border-radius: 4.3px;
+        img{
+            width: min-content;
+            height: min-content;
+
+        }
+        .ver_todos_last_card{
+            display: flex;
+            
+            gap: 1.4rem;
+            img{
+                align-self: center;
+            }
+            span{
+            font-weight: 600;
+            font-size: 1.72rem;
+            line-height: 2.6rem;
+            }
+        }
+    
     }
    
     

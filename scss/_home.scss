@@ -18,7 +18,7 @@ header{
             display: flex;
             align-items: center;
             gap: 11.23rem;
-            img{
+            .logo{
                 width: 11.5rem;
             }
         }
@@ -26,6 +26,16 @@ header{
         nav{
             gap: 3.4rem;
             display: flex;
+            a{
+                gap: 1.4rem;
+                img{
+                    display: flex;
+                    align-self: center;
+                    height: fit-content;
+                    
+                  
+                }
+            }
         }
         ul{
             
@@ -41,6 +51,13 @@ header{
                 border: white 1px solid;
                 span{
                     background: none;
+                }
+                &:hover{
+                    background-color: white;
+                    span{
+                        color: black;  
+                    }
+                    
                 }
             }
         }
@@ -117,6 +134,95 @@ header{
             }
         }
         }
+        }
+    }
+}
+
+#s-jogos{
+    #titulo-cards{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-top: 8.5rem;
+        padding-bottom: 8.2rem;
+        .t-cards-left{
+            display: flex;
+            width: 57.5%;
+            justify-content: space-between;
+            span{
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                color: #8F9199;
+                align-self: start;
+            }
+            h2{
+                max-width: 17.5rem;
+            }
+            ul{
+                display: flex;
+                gap: 2.4rem;
+                align-self: flex-end;
+            }
+        }
+        
+        .ver_todos{
+            display: flex;
+            gap: 1rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            
+            color: #00AEFF;
+
+
+        }
+    }
+
+    .cards{
+        
+        display: grid;
+        grid-template-areas: 'card-games card-games card-games card-games';
+        gap: 2.8rem;
+        padding-bottom: calc(10.7rem - 3.7rem);
+        
+    }
+}
+
+#s-download{
+    .container{
+        display: flex;
+        
+        .left{
+            display: flex;
+            flex-direction: column;
+            
+            img{
+                width: fit-content;
+            }
+            ul{
+                li{
+                    display: flex;
+                }
+            }
+        }
+        .floats{
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            img{
+                width: 100%;
+                
+                position: relative;
+                overflow: hidden;
+            }
+            .float-2{
+                align-self: flex-end;
+                overflow: hidden;
+                position: relative;
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  max-width: 131.2rem;
+  max-width: 133rem;
   padding: 0 1.5rem;
   margin: 0 auto;
 }
@@ -62,41 +62,77 @@ a {
   border: 0rem;
   border-radius: 0.4rem;
   display: flex;
+  transition: 0.3s;
 }
-.botao img {
-  background-color: #00AEFF;
-}
-.botao span {
-  background: #00AEFF;
+.botao:hover {
+  transition: 0.4s;
+  background-color: #40C2FF;
 }
 
 .card-games {
   width: 100%;
-  max-width: 301px;
+  max-width: 30.1rem;
+  padding-bottom: 3.7rem;
 }
 .card-games .game-info {
   display: flex;
   flex-direction: column;
 }
+.card-games .game-info h3 {
+  padding-top: 2.5rem;
+  padding-bottom: 0.43rem;
+}
 .card-games .game-info p {
   font-weight: 400;
-  font-size: 15.05px;
-  line-height: 23px;
+  font-size: 1.505rem;
+  line-height: 2.3rem;
   color: #E5E5E5;
   opacity: 0.8;
 }
 .card-games .imagem {
-  display: grid;
   overflow: hidden;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  width: 100%;
+  max-width: 30.1rem;
+  max-height: 41.28rem;
+  min-width: 30.1rem;
 }
 .card-games .imagem img {
   transition: 0.3s ease-in;
   width: 100%;
   height: 100%;
+}
+.card-games .last-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 30.1rem;
+  height: 41.28rem;
+  gap: 3.6rem;
+  border: 1.6125px solid #212428;
+  border-radius: 4.3px;
+}
+.card-games .last-card img {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.card-games .last-card .ver_todos_last_card {
+  display: flex;
+  gap: 1.4rem;
+}
+.card-games .last-card .ver_todos_last_card img {
+  align-self: center;
+}
+.card-games .last-card .ver_todos_last_card span {
+  font-weight: 600;
+  font-size: 1.72rem;
+  line-height: 2.6rem;
 }
 .card-games:hover .imagem img {
   transform: scale(1.1);
@@ -124,12 +160,22 @@ header .container .logo-nav {
   align-items: center;
   gap: 11.23rem;
 }
-header .container .logo-nav img {
+header .container .logo-nav .logo {
   width: 11.5rem;
 }
 header .container nav {
   gap: 3.4rem;
   display: flex;
+}
+header .container nav a {
+  gap: 1.4rem;
+}
+header .container nav a img {
+  display: flex;
+  align-self: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 header .container ul {
   gap: 1.6rem;
@@ -146,6 +192,12 @@ header .container ul #conta {
 }
 header .container ul #conta span {
   background: none;
+}
+header .container ul #conta:hover {
+  background-color: white;
+}
+header .container ul #conta:hover span {
+  color: black;
 }
 
 #s-main {
@@ -211,4 +263,79 @@ header .container ul #conta span {
   border: none;
   position: relative;
   left: 16.6rem;
+}
+
+#s-jogos #titulo-cards {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 8.5rem;
+  padding-bottom: 8.2rem;
+}
+#s-jogos #titulo-cards .t-cards-left {
+  display: flex;
+  width: 57.5%;
+  justify-content: space-between;
+}
+#s-jogos #titulo-cards .t-cards-left span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #8F9199;
+  align-self: start;
+}
+#s-jogos #titulo-cards .t-cards-left h2 {
+  max-width: 17.5rem;
+}
+#s-jogos #titulo-cards .t-cards-left ul {
+  display: flex;
+  gap: 2.4rem;
+  align-self: flex-end;
+}
+#s-jogos #titulo-cards .ver_todos {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #00AEFF;
+}
+#s-jogos .cards {
+  display: grid;
+  grid-template-areas: "card-games card-games card-games card-games";
+  gap: 2.8rem;
+  padding-bottom: 7rem;
+}
+
+#s-download .container {
+  display: flex;
+}
+#s-download .container .left {
+  display: flex;
+  flex-direction: column;
+}
+#s-download .container .left img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#s-download .container .left ul li {
+  display: flex;
+}
+#s-download .container .floats {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#s-download .container .floats img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#s-download .container .floats .float-2 {
+  align-self: flex-end;
+  overflow: hidden;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
