@@ -1,0 +1,109 @@
+#jogos{
+    background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
+    backdrop-filter: blur(6px);
+    display: none;
+    
+    
+    ul{
+        padding-top: 7.2rem;
+        padding-bottom: 8.5rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 9.2rem 3.2rem;
+        width: 100%;
+        a{
+            max-width: 10.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            span{
+                color: #9D9D9D;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 120%;
+            }
+            img{
+               max-width: 7rem;
+               max-height: 7rem;
+            }
+        }
+    }
+    .d-down{
+        background-color: rgba($color: #15171B, $alpha: 0.7);
+        
+            .container{
+           
+            height: 7rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6.4rem;
+            a{
+                flex-direction: row;
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                max-width: none;
+                gap: 1rem;
+                
+                img{
+                    width: auto;
+                    
+                }
+            }
+            .download_icon{
+                img{
+                    min-width: 24px;
+                }
+            }
+        }
+    }
+}
+
+#esportes{
+    background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
+    backdrop-filter: blur(6px);
+    display: none;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 6.4rem;
+        padding-top: 5.5rem;
+        padding-bottom: 9.3rem;
+        a{
+            max-width: 17.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            gap: 2rem;
+            span{
+                color: #9D9D9D;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 120%;
+            }
+        }
+    }
+    .d-down{
+        background-color: rgba($color: #15171B, $alpha: 0.7);
+        .container{
+            display: flex;
+            padding: 0;
+            height: 7rem;
+            align-items: center;
+            justify-content: center;
+            a{
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                flex-direction: row;
+                max-width: none;
+            }
+        }
+    }
+}
