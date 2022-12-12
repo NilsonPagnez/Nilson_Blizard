@@ -1,9 +1,15 @@
 #jogos{
     background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
     backdrop-filter: blur(6px);
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -64rem;
+    padding-top: 9.6rem;
+   
     
-    
+   
     ul{
         padding-top: 7.2rem;
         padding-bottom: 8.5rem;
@@ -61,13 +67,23 @@
             }
         }
     }
+    @media (max-width:1100px) {
+        visibility:hidden ;
+    }
 }
 
 #esportes{
     background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
     backdrop-filter: blur(6px);
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -52rem;
+    padding-top: 7.2rem;
+    
     ul{
+        
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 6.4rem;
@@ -105,5 +121,8 @@
                 max-width: none;
             }
         }
+    }
+    @media (max-width:1100px) {
+        visibility:hidden ;
     }
 }

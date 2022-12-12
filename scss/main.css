@@ -12,6 +12,12 @@ html {
   font-size: 62.5%;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 body {
   background-color: black;
 }
@@ -80,6 +86,13 @@ a {
   line-height: 2.1rem;
 }
 
+button {
+  display: flex;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
 .botao {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -94,6 +107,19 @@ a {
 .botao:hover {
   transition: 0.4s;
   background-color: #40C2FF;
+}
+
+input {
+  height: 4.8rem;
+  width: 42.6rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #363842;
+  border-radius: 0.4rem;
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+  border: 0;
 }
 
 .card-games {
@@ -187,12 +213,13 @@ a {
 }
 @media (max-width: 1100px) {
   .card-games {
+    max-width: 20.2rem;
     min-width: 20.1rem;
   }
   .card-games .last-card {
     min-width: 20.1rem;
-    max-width: 21.7rem;
-    max-height: 29.8rem;
+    max-width: 20.1rem;
+    max-height: 27.7rem;
   }
 }
 @media (max-width: 722px) {
@@ -223,72 +250,76 @@ header {
   height: 9.6rem;
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
   position: absolute;
-  z-index: 20;
+  z-index: 15;
   width: 100%;
   top: 0;
   left: 0;
 }
-header .container {
+header #logo_container {
+  position: relative;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .container .logo-nav {
+header #logo_container .logo-nav {
   display: flex;
   align-items: center;
   height: 100%;
   gap: 11.23rem;
 }
-header .container .logo-nav .logo-a {
+header #logo_container .logo-nav .logo-a {
   position: relative;
   height: 100%;
 }
-header .container .logo-nav .logo-a .logo {
+header #logo_container .logo-nav .logo-a .logo {
   width: 11.5rem;
 }
-header .container .logo-nav .logo-a::after {
+header #logo_container .logo-nav .logo-a::after {
   content: "";
   width: 4.3rem;
   border-top: 0.19rem solid #00AEFF;
   position: absolute;
   bottom: -0.2rem;
 }
-header .container nav {
+header #logo_container nav {
   gap: 3.4rem;
   display: flex;
 }
-header .container nav a {
+header #logo_container nav button {
   gap: 1.4rem;
+  display: flex;
 }
-header .container nav a img {
+header #logo_container nav button img {
   display: flex;
   align-self: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-header .container .right {
+header #logo_container .right {
   gap: 1.6rem;
   display: flex;
 }
-header .container .right img {
+header #logo_container .right img {
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
-header .container .right #conta {
+header #logo_container .right #conta {
   background: none;
   border: white 1px solid;
 }
-header .container .right #conta:hover {
+header #logo_container .right #conta:hover {
   background-color: white;
 }
-header .container .right #conta:hover span {
+header #logo_container .right #conta:hover span {
   color: black;
 }
-header .container .right #logar {
+header #logo_container .right #logar {
   gap: 0.6rem;
+  height: 100%;
 }
 @media (min-width: 1100px) {
   header .menu {
@@ -299,9 +330,8 @@ header .container .right #logar {
   header .logo {
     width: 8.6rem !important;
   }
-  header nav a {
-    display: none;
-    gap: 0rem;
+  header nav {
+    display: none !important;
   }
 }
 @media (max-width: 722px) {
@@ -317,7 +347,11 @@ header .container .right #logar {
 }
 
 #s-main {
+  position: relative;
   height: 73.6rem;
+}
+#s-main .main {
+  height: 100%;
 }
 #s-main #swiper_nav {
   position: absolute;
@@ -334,6 +368,24 @@ header .container .right #logar {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  cursor: pointer;
+}
+#s-main #swiper_nav ul .swiper-slide {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+#s-main #swiper_nav ul .swiper-slide-thumb-active {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+#s-main .slide-progress-bar span {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #00AEFF;
+  -webkit-animation: progress 4500ms linear;
+          animation: progress 4500ms linear;
 }
 #s-main .swiper_container {
   z-index: 1;
@@ -352,6 +404,9 @@ header .container .right #logar {
   #s-main .swiper_container {
     background-position-x: 30%;
   }
+}
+#s-main .swiper {
+  height: 100%;
 }
 #s-main #swiper_diablo4 {
   background-image: url(../Image_Blizzard/bg-diablo4_1920.jpg);
@@ -385,6 +440,9 @@ header .container .right #logar {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+#s-main #swiper_wow h1 {
+  width: 600px;
 }
 @media (max-width: 1100px) {
   #s-main #swiper_wow {
@@ -472,6 +530,7 @@ header .container .right #logar {
   background: none;
   border: none;
   position: absolute;
+  display: block;
 }
 #s-main .container .d-right .trailer .trailer-thumb button img {
   margin: 0 auto;
@@ -504,12 +563,16 @@ header .container .right #logar {
     display: flex;
     position: absolute;
     bottom: 10.2rem;
+    max-width: 30rem;
+    align-items: center;
+    justify-content: center;
+    left: 11rem;
   }
   #s-main .d-left ul {
     gap: 2rem;
     display: flex;
     flex-direction: row !important;
-    justify-content: flex-end;
+    justify-content: center;
   }
   #s-main .d-mid {
     margin-left: 0 !important;
@@ -537,6 +600,13 @@ header .container .right #logar {
   }
   #s-main .d-left {
     bottom: 6.2rem !important;
+    max-width: 34.3rem;
+    left: 1.2rem;
+  }
+  #s-main .d-left ul li {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
   }
   #s-main .d-mid {
     padding-top: 5.1rem;
@@ -610,7 +680,7 @@ header .container .right #logar {
 #s-jogos .cards {
   display: grid;
   grid-template-areas: "card-games card-games card-games card-games";
-  gap: 2.8rem;
+  justify-content: space-between;
   padding-bottom: 7rem;
 }
 @media (max-width: 1270px) {
@@ -671,6 +741,10 @@ header .container .right #logar {
   line-height: 178.2%;
   color: #828792;
   gap: 16px;
+}
+#s-download .container .left ul li img {
+  display: block;
+  margin: auto 0;
 }
 #s-download .container .left a {
   gap: 1rem;
@@ -752,6 +826,73 @@ header .container .right #logar {
   }
 }
 
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.4s;
+  z-index: 99;
+  visibility: hidden;
+  height: 100%;
+}
+.login .login_content {
+  width: 69.8rem;
+  height: 60rem;
+  background-image: url(../Image_Blizzard/bg_logar.png);
+  background-position: left left;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.login .login_content button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.login .login_content img {
+  margin: 0 auto;
+}
+.login .login_content .bn_Logo {
+  padding-bottom: 4rem;
+}
+.login .login_content #conect {
+  margin-top: 0.8rem;
+  width: 42.6rem;
+  justify-content: center;
+  transition: 0s;
+}
+.login .login_content p {
+  padding-top: 4.1rem;
+  padding-bottom: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+.login .login_content p:first-of-type {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+.login .login_content .login_a {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-decoration: underline;
+  color: #00AEFF;
+}
+
 @-webkit-keyframes float {
   0% {
     transform: translatey(-2rem);
@@ -775,11 +916,204 @@ header .container .right #logar {
     transform: translatey(-2rem);
   }
 }
+@-webkit-keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes seta {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+    filter: invert(52%) sepia(62%) saturate(3774%) hue-rotate(172deg) brightness(104%) contrast(106%);
+  }
+}
+@keyframes seta {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+    filter: invert(52%) sepia(62%) saturate(3774%) hue-rotate(172deg) brightness(104%) contrast(106%);
+  }
+}
+@-webkit-keyframes setaOut {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
+    filter: none;
+  }
+}
+@keyframes setaOut {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
+    filter: none;
+  }
+}
+@-webkit-keyframes menuJ {
+  from {
+    top: -64rem;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes menuJ {
+  from {
+    top: -64rem;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes menuJOut {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -64rem;
+  }
+}
+@keyframes menuJOut {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -64rem;
+  }
+}
+@-webkit-keyframes menuE {
+  from {
+    top: -52rem;
+  }
+  to {
+    top: 0rem;
+  }
+}
+@keyframes menuE {
+  from {
+    top: -52rem;
+  }
+  to {
+    top: 0rem;
+  }
+}
+@-webkit-keyframes menuEOut {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -52rem;
+  }
+}
+@keyframes menuEOut {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -52rem;
+  }
+}
+@-webkit-keyframes loginAn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loginAn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes logoutAn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes logoutAn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loginContentAn {
+  from {
+    opacity: 0;
+    top: 8rem;
+  }
+  to {
+    opacity: 1;
+    top: 0rem;
+  }
+}
+@keyframes loginContentAn {
+  from {
+    opacity: 0;
+    top: 8rem;
+  }
+  to {
+    opacity: 1;
+    top: 0rem;
+  }
+}
+@-webkit-keyframes logoutContentAn {
+  from {
+    opacity: 1;
+    top: 0rem;
+  }
+  to {
+    opacity: 0;
+    top: 8rem;
+  }
+}
+@keyframes logoutContentAn {
+  from {
+    opacity: 1;
+    top: 0rem;
+  }
+  to {
+    opacity: 0;
+    top: 8rem;
+  }
+}
 #jogos {
   background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  display: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -64rem;
+  padding-top: 9.6rem;
 }
 #jogos ul {
   padding-top: 7.2rem;
@@ -832,12 +1166,22 @@ header .container .right #logar {
 #jogos .d-down .container .download_icon img {
   min-width: 24px;
 }
+@media (max-width: 1100px) {
+  #jogos {
+    visibility: hidden;
+  }
+}
 
 #esportes {
   background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  display: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -52rem;
+  padding-top: 7.2rem;
 }
 #esportes ul {
   display: grid;
@@ -877,4 +1221,9 @@ header .container .right #logar {
   line-height: 2.4rem;
   flex-direction: row;
   max-width: none;
+}
+@media (max-width: 1100px) {
+  #esportes {
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -11,7 +11,11 @@
 html{
     font-size: 62.5%;
 }
-
+button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
 body{
     background-color: black;
 }

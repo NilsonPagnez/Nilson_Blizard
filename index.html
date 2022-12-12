@@ -5,35 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blizzard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
+ 
 </head>
 <body>
-   
+
     <header>    
-        
-        <div class="container">
-            <div class="logo-nav">
-                <a class="logo-a" href="./">
-                <img class="logo" src="Image_Blizzard/Blizzard_logo.svg" alt="">
-                </a>
-            <nav>
-                <a class="jogos_button" href="#">Jogos <img src="Image_Blizzard/seta_header.png" alt=""></a>
-                <a class="esportes_button" href="#">Esportes<img src="Image_Blizzard/seta_header.png" alt=""></a>
-                <a href="#">Loja</a>
-                <a href="#">Notícias</a>
-                <a href="#">Suporte</a>
-            </nav>
-            </div>
-            <div class="right">
-                <a id="conta" class="botao" href=""><span>Criar conta</span></a>
-                <a id="logar" class="botao" href=""><img src="Image_Blizzard/User_Icon.png" alt=""> <span>Logar</span></a>
-            </div>
-            <a class="menu" href=""><img src="Image_Blizzard/menu_icon.png" alt=""></a>
-            
-        </div>
-
-
         <div id="jogos" >
             <div class="container">
                     <ul>
@@ -63,7 +42,7 @@
             </div>
             </div>
 
-        <div id="esportes">
+            <div id="esportes">
                 <div class="container">
                     <ul >
                         <li><a href=""><img src="Image_Blizzard/Heathstone_Esportes_Icon.png" alt=""><span>Hearthstone® masters</span></a></li>
@@ -79,6 +58,31 @@
                     </ul>
                 </div>
             </div>
+
+        <div id="logo_container" class="container">
+            <div class="logo-nav">
+                <a class="logo-a" href="./">
+                <img class="logo" src="Image_Blizzard/Blizzard_logo.svg" alt="">
+                </a>
+            <nav>
+                <button class="jogos_button" onclick="show_hideJ()">Jogos <img class="img_seta1" src="Image_Blizzard/seta_header.png" alt=""></button>
+                <button class="esportes_button" onclick="show_hideE()" >Esportes<img class="img_seta2" src="Image_Blizzard/seta_header.png" alt=""></button>
+                <a href="#">Loja</a>
+                <a href="#">Notícias</a>
+                <a href="#">Suporte</a>
+            </nav>
+            </div>
+            <div class="right">
+                <a id="conta" class="botao" href=""><span>Criar conta</span></a>
+                <button id="logar" class="botao" onclick="show_hideLogin()"><img src="Image_Blizzard/User_Icon.png" alt=""> <span>Logar</span></a></button>
+            </div>
+            <a class="menu" href=""><img src="Image_Blizzard/menu_icon.png" alt=""></a> <!--Menu da responsividade-->
+            
+        </div>
+
+
+        
+        
         
         
         
@@ -86,100 +90,122 @@
     
    
     <section id="s-main">
-        <div id="swiper_nav" class="container">
-            <div class="d-left">
-                <ul>
-                    <a href="#"><img src="Image_Blizzard/Diablo4Icon.png" alt=""></a>
-                    <a href="#"><img src="Image_Blizzard/HearthstoneIcon.png" alt=""></a>
-                    <a href="#"><img src="Image_Blizzard/WoWicon.png" alt=""></a>
-                    <a href="#"><img src="Image_Blizzard/DiabloImortalIcon.png" alt=""></a>
-                    <a href="#"><img src="Image_Blizzard/StarCraft2Icon.png" alt=""></a>
-                </ul>
-            </div>
-            
-        </div>
-    <!--<div id="swiper_diablo4" class="swiper_container" >
-            
-            <div id="d4_main" class="container">
-                
-                <div class="d-mid">
-                    <h1>Retorne à escuridão com o game Diablo IV</h1>
-                    <p>O retorno de Lilith traz uma era de escuridão e sofrimento</p>
-                    <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Jogue agora</a>
-                </div>
-            
-            <div class="d-right">
-                <img src="Image_Blizzard/Diablo4_BigIcon.png" alt="">
-                
-                <div class="trailer">
-                    <span>Assista ao trailer</span>
-                    <a class="trailer-thumb" href="./">
-                        <img class="thumb" src="Image_Blizzard/Thumb_Diablo4.png" alt="">
-                        <img class="gifs" src="Image_Blizzard/Diablo_gif.gif" alt="">
-                        <button><img src="Image_Blizzard/Play.png" alt=""></button>
-                        <button> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
-                    </a>
+        
+            <div id="swiper_nav" class="container">
+                <div id="slide-thumb" class="d-left">   
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide" ><img  src="Image_Blizzard/Diablo4Icon.png" alt=""></li>
+                        <li class="swiper-slide"><img  src="Image_Blizzard/HearthstoneIcon.png" alt=""></li>
+                        <li class="swiper-slide"><img src="Image_Blizzard/WoWicon.png" alt=""></li>
+                        <li class="swiper-slide"><img src="Image_Blizzard/DiabloImortalIcon.png" alt=""></li>
+                        <li class="swiper-slide"><img src="Image_Blizzard/StarCraft2Icon.png" alt=""></li> 
+                    </ul>
                 </div>
             </div>
-            </div>
-        </div>  
 
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide">
+                        <div id="swiper_diablo4" class="swiper_container " >
+                        
+                            <div id="d4_main" class="container">
+                                
+                                <div class="d-mid">
+                                    <h1>Retorne à escuridão com o game Diablo IV</h1>
+                                    <p>O retorno de Lilith traz uma era de escuridão e sofrimento</p>
+                                    <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Jogue agora</a>
+                                </div>
+                            
+                            <div class="d-right">
+                                <img class="big_icon" src="Image_Blizzard/Diablo4_BigIcon.png" alt="">
+                                
+                                <div class="trailer">
+                                    <span>Assista ao trailer</span>
+                                    <a class="trailer-thumb" href="./">
+                                        <img class="thumb" src="Image_Blizzard/Thumb_Diablo4.png" alt="">
+                                        <img class="gifs" src="Image_Blizzard/Diablo_gif.gif" alt="">
+                                        <button class="play"><img src="Image_Blizzard/Play.png" alt=""></button>
+                                        <button class="play"> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
+                                    </a>
+                                </div>
+                            </div>
+                           
+                            </div>
+                            
+                            
+                        </div>  
+                        
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div id="swiper_hearthstone" class="swiper_container">
+                            <div id="#hearthstone_main" class="container">
+                                
+                                <div class="d-mid">
+                                    <h1>Novo pacote de expansão de Hearthstone</h1>
+                                    <p>A Horda e a Aliança se encontraram no Vale Alterac para lutar</p>
+                                    <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Reserve agora na pré-venda</a>
+                                </div>
+                            
+                            <div class="d-right">
+                                <img class="big_icon" src="Image_Blizzard/Hearthstone_BigIcon.png" alt="">
+                                
+                                <div class="trailer">
+                                    <span>Assista ao trailer</span>
+                                    <a class="trailer-thumb" href="./">
+                                        <img class="thumb" src="Image_Blizzard/Thumb_hearthstone.png" alt="">
+                                        <img class="gifs" src="Image_Blizzard/heartstone_gif.gif" alt="">
+                                        <button><img src="Image_Blizzard/Play_hearthstone.png" alt=""></button>
+                                        <button> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
 
-       
-    </div>
-
-
-
-    <div id="swiper_hearthstone" class="swiper_container">
-        <div id="#hearthstone_main" class="container">
+                    <div class="swiper-slide">
+                        <div id="swiper_wow" class="swiper_container">
+                            <div id="#wow_main" class="container">
+                                
+                                <div class="d-mid">
+                                    <h1>Desbrave as Terras Sombrias em Shadowlands! </h1>
+                                    <p>O que jaz além do mundo que você conhece?</p>
+                                    <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Reserve agora na pré-venda</a>
+                                </div>
+                            
+                            <div class="d-right">
+                                <img class="big_icon" src="Image_Blizzard/WoW_BigIcon.png" alt="">
+                                
+                                <div class="trailer">
+                                    <span>Assista ao trailer</span>
+                                    <a class="trailer-thumb" href="./">
+                                        <img class="thumb" src="Image_Blizzard/Thumb_wow.png" alt="">
+                                        <img class="gifs" src="Image_Blizzard/wow_gif.gif" alt="">
+                                        <button><img src="Image_Blizzard/Play_wow.png" alt=""></button>
+                                        <button> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-progress">
+                        <div class="progress"></div>
+                    </div>
+                    </div>
+                    
             
-            <div class="d-mid">
-                <h1>Novo pacote de expansão de Hearthstone</h1>
-                <p>A Horda e a Aliança se encontraram no Vale Alterac para lutar</p>
-                <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Reserve agora na pré-venda</a>
             </div>
         
-        <div class="d-right">
-            <img class="big_icon" src="Image_Blizzard/Hearthstone_BigIcon.png" alt="">
-            
-            <div class="trailer">
-                <span>Assista ao trailer</span>
-                <a class="trailer-thumb" href="./">
-                    <img class="thumb" src="Image_Blizzard/Thumb_hearthstone.png" alt="">
-                    <img class="gifs" src="Image_Blizzard/heartstone_gif.gif" alt="">
-                    <button><img src="Image_Blizzard/Play_hearthstone.png" alt=""></button>
-                    <button> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
-                </a>
-            </div>
-        </div>
-        </div>
-    </div>-->
-
-    
-    <div id="swiper_wow" class="swiper_container">
-        <div id="#wow_main" class="container">
-            
-            <div class="d-mid">
-                <h1>Desbrave as Terras Sombrias em Shadowlands! </h1>
-                <p>O que jaz além do mundo que você conhece?</p>
-                <a href="" class="botao"><img src="Image_Blizzard/User_Icon.png" alt="">Reserve agora na pré-venda</a>
-            </div>
-        
-        <div class="d-right">
-            <img class="big_icon" src="Image_Blizzard/WoW_BigIcon.png" alt="">
-            
-            <div class="trailer">
-                <span>Assista ao trailer</span>
-                <a class="trailer-thumb" href="./">
-                    <img class="thumb" src="Image_Blizzard/Thumb_wow.png" alt="">
-                    <img class="gifs" src="Image_Blizzard/wow_gif.gif" alt="">
-                    <button><img src="Image_Blizzard/Play_wow.png" alt=""></button>
-                    <button> <img class="b-hover" src="Image_Blizzard/PlayHover_icon.png" alt=""></button>
-                </a>
-            </div>
-        </div>
-        </div>
-    </div>
+   
 
     </section>
 
@@ -361,15 +387,30 @@
         <div class="floats">
             <img class="img1" src="Image_Blizzard/Float_image.png" alt="">
             
-                <img class="img2" src="Image_Blizzard/Float_image2.png" alt="">  
-            
-            
-            
+            <img class="img2" src="Image_Blizzard/Float_image2.png" alt="">  
+        
         </div>
     </div>
 </section>
 
 
+<div class="login">
+    <div class="login_content">
+            <button onclick="show_hideLogin()"><img  src="Image_Blizzard/Logar_exit.png" alt=""></button>
+            <img class="bn_Logo" src="Image_Blizzard/BattlenetLogo_logar.png" alt="">
+            <input type="email" placeholder="E-mail ou telefone">
+            <input type="password" placeholder="Senha" name="" id="">
+            <a id="conect" href="#" class="botao">Conectar-se</a>
+            <p>ou conecte-se com </p>
+            <img src="Image_Blizzard/Logar_google_apple_FB.png" alt="">
+            <p><a class="login_a" href="#">Crie uma conta  </a>&nbspBattle.net de graça</p>
+            <a  class="login_a" href="#">Não consegue logar? </a>
+        </div>
+    
+    
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
