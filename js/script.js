@@ -86,6 +86,7 @@ var swiper = new Swiper (".swiper", {
     effect: "fade",
     disableOnInteraction: true,
     allowTouchMove: false,
+    loop: true,
 
     autoplay: {
         
