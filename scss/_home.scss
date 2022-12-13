@@ -7,7 +7,7 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-
+    
     
    
     
@@ -82,7 +82,7 @@ header{
             
             #logar{
                 gap: 0.6rem;
-                height: 100%;
+                height: 4.3remd;
 
             }
         }
@@ -165,18 +165,23 @@ header{
 
 
     }
-    .slide-progress-bar{
-        span{
-            height: 2px;
+    .carousel-progress{
+        width: 100%;
+        position: absolute;
+        z-index: 70;
+        bottom: 0;
+        .progress{
+        
+            height: 0.3rem;
             width: 100%;
             position: absolute;
             bottom: 0;
             background-color: #00AEFF;
             animation: progress 4500ms  linear ;
+    
         }
-            
-
     }
+   
     .swiper_container{
         z-index: 1;
         height: 100%;
@@ -401,7 +406,7 @@ header{
             right: 0rem;
             justify-content: space-between!important;
             padding-bottom: 8.6rem;
-            padding-top: 3.2rem;
+            padding-top: 6.2rem;
             margin-right: 3rem;
             
         }

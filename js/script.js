@@ -63,6 +63,11 @@ const custom_styleSetaOut={
 const seta2=document.querySelector(".img_seta2")
 
 
+
+
+
+
+
 //progress bar
 const progressBar = document.querySelector(".progress");
 progressBar.addEventListener("animationend", myEndFunction);
@@ -98,14 +103,14 @@ var swiper = new Swiper (".swiper", {
 // Retrigger Animation on Slide Change
 
 function myEndFunction() {
-  swiper2.slideNext();
+  swiper.slideNext();
   progressBar.style.animation = "none";
   void progressBar.offsetWidth; // Triggers Reflow
   progressBar.style.animation = null;
 }
 // Reset Progress Bar On Slide Change
 
-swiper2.on("slideChange", function () {
+swiper.on("slideChange", function () {
   progressBar.style.animation = "none";
   void progressBar.offsetWidth; // Triggers Reflow
   progressBar.style.animation = null;
@@ -113,20 +118,35 @@ swiper2.on("slideChange", function () {
 
 // jogos e esportes
 
+
+//jogos
 function show_hideJ(){
     if(a==1){
         Object.assign(jogo.style,custom_styleJOut);
         Object.assign(seta1.style,custom_styleSetaOut);
         return a=0 ;
-
+        
+    }else if(b==1){
+        Object.assign(esporte.style,custom_styleEOut);
+        Object.assign(seta2.style,custom_styleSetaOut);
+       
+        
+        return b=0
+    
     }else{
         Object.assign(jogo.style,custom_styleJIn);
         Object.assign(seta1.style,custom_styleSeta);
         return a=1
     }
-
+}
+function mouseOutJ(){
+    Object.assign(jogo.style,custom_styleJOut);
+    Object.assign(seta1.style,custom_styleSetaOut);
+    return a=0
 }
 
+
+//esportes
 function show_hideE(){
     if(b==1){
         
@@ -134,13 +154,24 @@ function show_hideE(){
         Object.assign(seta2.style,custom_styleSetaOut);
         return b=0;
     }
-    else{
+    else if(a==1){
+        Object.assign(jogo.style,custom_styleJOut);
+        Object.assign(seta1.style,custom_styleSetaOut);
+        return a=0
+    }else{
         Object.assign(esporte.style,custom_styleEIn);
         Object.assign(seta2.style,custom_styleSeta);
         return b=1
     }
-    
 }
+function mouseOutE(){
+    Object.assign(esporte.style,custom_styleEOut);
+    Object.assign(seta2.style,custom_styleSetaOut);
+    return b=0
+}
+
+
+    
 
 //Função do "LOGAR"     
 

@@ -46,35 +46,43 @@
 @keyframes menuJ {
     from{
         top: -64rem;
+        opacity: 0;
     }
     to{
         top: 0;
+        opacity: 1;
     }
 }
 @keyframes menuJOut {
     from{
         top: 0rem;
+        opacity: 1;
     }
     to{
         top: -64rem;
+        opacity: 0;
     }
 }
 
 @keyframes menuE {
     from{
         top: -52rem;
+        opacity: 0;
     }
     to{
         top: 0rem;
+        opacity: 1;
     }
 }
 
 @keyframes menuEOut {
     from{
         top: 0rem;
+        opacity: 1;
     }
     to{
         top: -52rem;
+        opacity: 0;
     }
 }
 
