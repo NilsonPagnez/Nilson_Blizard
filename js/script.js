@@ -90,7 +90,7 @@ var swiper = new Swiper (".swiper", {
 
     autoplay: {
         
-        delay: 4500,
+        delay: 5500,
         slidesPerView: 5,
         disableOnInteraction: false,
     },
