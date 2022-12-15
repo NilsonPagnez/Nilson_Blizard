@@ -689,15 +689,18 @@ header{
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     transition: all 0.4s;
     z-index: 99;
     visibility: hidden;
     height: 100%;
+    width: 100%;
+    margin:0 auto;
+    
+ 
     
     .login_content{
+        position: relative;
         width: 69.8rem;
         height: 60rem;
         background-image: url(../Image_Blizzard/bg_logar.png);
@@ -754,4 +757,5 @@ header{
         }
 
     }
+    
 }
